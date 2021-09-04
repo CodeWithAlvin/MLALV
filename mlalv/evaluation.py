@@ -3,8 +3,9 @@ from sklearn.metrics import f1_score,precision_score,recall_score,accuracy_score
 from sklearn.metrics import mean_squared_error
 from math import sqrt 
 
-def prepare_report(y_true,y_pred,type="",log=True,avg="micro"):
+def prepare_report(y_true,y_pred,type,log=True,avg="micro"):
     """
+    type ==> classification / regression
     analyze the classification model on the parameters
     f1-score , recall , precision , accuracy
 
@@ -13,7 +14,7 @@ def prepare_report(y_true,y_pred,type="",log=True,avg="micro"):
     """
 
     if type == "classification":
-        f1 = f1_score(y_true,y_pred, average=avg)# analysing f1 score      f = f1_score(y_true, y_pred, average=avg)# analysing f1 score
+        f1 = f1_score(y_true,y_pred, average=avg)# analysing f1 score   
         precision = precision_score(y_true, y_pred, average=avg)# analysing precision score
         recall = recall_score(y_true, y_pred, average=avg)# analysing recall score
         accuracy = accuracy_score(y_true, y_pred)# analysing accuracy score                
