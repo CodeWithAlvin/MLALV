@@ -1,3 +1,2 @@
-import graphs
-import matplotlib.pyplot as plt
+import visual
 import evaluation
