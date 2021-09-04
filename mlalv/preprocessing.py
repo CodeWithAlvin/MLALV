@@ -5,6 +5,7 @@ from sklearn.preprocessing import StandardScaler,OneHotEncoder,OrdinalEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 
+
 class Process:
     def __init__(self):
         pass
